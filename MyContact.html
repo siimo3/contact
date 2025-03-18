@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajouter mon contact</title>
+    <script>
+        function addContactAndOpenWhatsApp() {
+            // 🔹 Étape 1 : Télécharger automatiquement le fichier VCF
+            var vcfLink = document.createElement("a");
+            vcfLink.href = "https://github.com/siimo3/contact/blob/main/MyContact.vcf"; // Remplace par ton lien
+            vcfLink.download = "MyContact.vcf";
+            document.body.appendChild(vcfLink);
+            vcfLink.click();
+            document.body.removeChild(vcfLink);
+
+            // 🔹 Étape 2 : Ouvrir WhatsApp après 2 secondes
+            setTimeout(function () {
+                window.location.href = "https://wa.me/212610101088?text=Hello!";
+            }, 2000);
+        }
+    </script>
+</head>
+<body onload="addContactAndOpenWhatsApp()">
+    <h2>Ajout du contact en cours...</h2>
+    <p>Si rien ne se passe, <a href="https://wa.me/212610101088?text=Hello!">clique ici pour WhatsApp</a>.</p>
+</body>
+</html>
