@@ -8,7 +8,7 @@
         function addContactAndOpenWhatsApp() {
             // 🔹 Étape 1 : Télécharger automatiquement le fichier VCF
             var vcfLink = document.createElement("a");
-            vcfLink.href = "https://github.com/siimo3/contact/blob/main/MyContact.vcf"; // Remplace par ton lien
+            vcfLink.href = "https://siimo3.github.io/contact/MyContact.vcf";  // Assurez-vous que l'URL pointe vers votre fichier VCF
             vcfLink.download = "MyContact.vcf";
             document.body.appendChild(vcfLink);
             vcfLink.click();
@@ -16,7 +16,7 @@
 
             // 🔹 Étape 2 : Ouvrir WhatsApp après 2 secondes
             setTimeout(function () {
-                window.location.href = "https://wa.me/212610101088?text=Hello!";
+                window.location.href = "https://wa.me/212610101088?text=Hello!";  // Remplacez par votre numéro et message
             }, 2000);
         }
     </script>
